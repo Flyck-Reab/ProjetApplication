@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Bienvenue</string>
+    <string name="Titre">Bienvenue</string>
+    <string name="descirption">Ce texte decrit l'utilité de l'application et la façon de l'utiliser</string>
+    <string name="Commencer">Commencer</string>
 </resources>
