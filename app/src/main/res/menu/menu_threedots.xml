@@ -3,6 +3,6 @@
     <item
         android:title="Theme"
         android:id="@+id/theme"
-        android:onClick="onOptionsItemSelected"/>
+        />
 
 </menu>
