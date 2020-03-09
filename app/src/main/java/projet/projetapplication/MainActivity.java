@@ -20,42 +20,13 @@ import java.util.jar.Attributes;
 
 public class MainActivity<myDbAdapter> extends AppCompatActivity {
 
-    private EditText Pass , updateold, updatenew, delete;
-    private TextView nomJeu;
-    private Button ajouter;
-    private myDbAdapter helper;
-    private RadioGroup plateFormeGroup;
-    private RadioButton plateFormeButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        nomJeu = (TextView)findViewById(R.id.nomJeu);
-        ajouter = (Button)findViewById(R.id.buttonAjout);
-        plateFormeGroup = (RadioGroup)findViewById(R.id.PlateFormeGroup);
-
-        helper = new myDbAdapter(this);
     }
 
-    public void ajouterJeu(View v) {
-        String nom = nomJeu.getText().toString();
-        if(nom.isEmpty()) {
-            Toast.makeText(v.getContext(), "Erreur !", Toast.LENGTH_SHORT).show();
-        } else {
-            long id = helper.insertData(nomJeu);
-            if(id<=0)
-            {
-                Toast.makeText()
-                Pass.setText("");
-            } else
-            {
-                Message.message(getApplicationContext(),"Insertion Successful");
-                Attributes.Name.setText("");
-                Pass.setText("");
-            }
-        }
-    }
+
 
     public void sendMessage(View view)
     {
