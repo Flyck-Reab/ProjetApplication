@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.util.jar.Attributes;
 
 public class SelectionPlateforme extends AppCompatActivity {
-
+/*
     private EditText Pass , updateold, updatenew, delete;
     private TextView nomJeu;
     private Button ajouter;
@@ -52,4 +52,6 @@ public class SelectionPlateforme extends AppCompatActivity {
             }
         }
     }
+
+ */
 }

@@ -24,6 +24,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTheme(R.style.darkTheme);
     }
 
 
@@ -43,10 +44,15 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.menuAnglais:
+            case R.id.theme:
+                Toast message;
+                String texte = "Changement de theme";
+                message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
+                message.show();
+
                 break;
-            case R.id.menuFrancais:
-                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + id);
         }
         return true;
     }
