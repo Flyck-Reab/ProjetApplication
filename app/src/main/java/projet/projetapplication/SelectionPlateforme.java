@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sqliteoperations.myDbAdapter;
+
 import java.util.jar.Attributes;
 
 public class SelectionPlateforme extends AppCompatActivity {
@@ -36,20 +38,31 @@ public class SelectionPlateforme extends AppCompatActivity {
 
     public void ajouterJeu(View v) {
         String nom = nomJeu.getText().toString();
+        int selectedId=plateFormeGroup.getCheckedRadioButtonId();
+        plateFormeButton=(RadioButton)findViewById(selectedId);
+
         if(nom.isEmpty()) {
             Toast.makeText(v.getContext(), "Erreur !", Toast.LENGTH_SHORT).show();
         } else {
-            long id = helper.insertData(nomJeu);
+            long id = helper.insertData(nomJeu, plateFormeButton);
             if(id<=0)
             {
                 Toast.makeText(v.getContext(), "Erreur lors de l'insertion !", Toast.LENGTH_SHORT).show();
-                Pass.setText("");
+                nomJeu.setText("");
+                plateFormeButton.setText("");
             } else
             {
-                Message.message(getApplicationContext(),"Insertion Successful");
-                Attributes.Name.setText("");
-                Pass.setText("");
+                Toast.makeText(v.getContext(), "Insertion réussie !", Toast.LENGTH_SHORT).show();
+                nomJeu.setText("");
+                plateFormeButton.setText("");
             }
         }
     }
+
+    public void viewdata(View view)
+    {
+        String data = helper.getData();
+        Toast.makeText(view.getContext(), ""+ this, Toast.LENGTH_SHORT).show();
+    }
+
 }
