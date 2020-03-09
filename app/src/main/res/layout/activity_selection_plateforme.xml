@@ -7,26 +7,28 @@
     tools:context=".SelectionPlateforme">
 
     <RadioGroup
+        android:id="@+id/PlateFormeGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="182dp">
+        tools:layout_editor_absoluteY="182dp"
+        tools:ignore="MissingConstraints">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioSteam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Steam" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioBlizzard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Blizzard" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioEpic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Epic Games" />
@@ -43,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/nomJeu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -53,11 +55,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonAjout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
-        android:text="Button"
+        android:text="Ajouter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
