@@ -2,13 +2,14 @@ package projet.projetapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-public class affichageJeux extends AppCompatActivity {
+class affichageJeux extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac);
+        setContentView(R.layout.activity_affichage_jeux);
     }
 }
