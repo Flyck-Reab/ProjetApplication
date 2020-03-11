@@ -10,28 +10,37 @@
         android:id="@+id/PlateFormeGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="182dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <RadioButton
             android:id="@+id/radioSteam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Steam" />
+            android:text="Steam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="113dp" />
 
         <RadioButton
             android:id="@+id/radioBlizzard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blizzard" />
+            android:text="Blizzard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <RadioButton
             android:id="@+id/radioEpic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Epic Games" />
+            android:text="Epic Games"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>
 
     <TextView

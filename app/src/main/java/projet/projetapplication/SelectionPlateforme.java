@@ -2,6 +2,7 @@ package projet.projetapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -52,9 +53,12 @@ public class SelectionPlateforme extends AppCompatActivity {
                 plateFormeButton.setText("");
             } else
             {
+
                 Toast.makeText(v.getContext(), "Insertion réussie !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
                 plateFormeButton.setText("");
+                Intent k = new Intent(SelectionPlateforme.this, MainActivity.class);
+                startActivity(k);
             }
         }
     }

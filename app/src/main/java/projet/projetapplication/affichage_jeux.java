@@ -10,8 +10,8 @@ import com.example.sqliteoperations.myDbAdapter;
 
 class affichageJeux extends AppCompatActivity {
 
+    /*
     private myDbAdapter.myDbHelper myhelper;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,5 +19,6 @@ class affichageJeux extends AppCompatActivity {
         setContentView(R.layout.activity_affichage_jeux);
         Intent i = new Intent(MainActivity.this, DisplayActivity.class);
     }
+     */
 
 }
