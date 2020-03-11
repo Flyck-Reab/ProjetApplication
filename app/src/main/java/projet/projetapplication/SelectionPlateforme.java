@@ -31,6 +31,7 @@ public class SelectionPlateforme extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_plateforme);
         nomJeu = (TextView)findViewById(R.id.nomJeu);
+        nomJeu.setText(getIntent().getStringExtra("NomDuJeu"));
         ajouter = (Button)findViewById(R.id.buttonAjout);
         plateFormeGroup = (RadioGroup)findViewById(R.id.PlateFormeGroup);
 
