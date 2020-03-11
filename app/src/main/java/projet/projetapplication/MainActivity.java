@@ -24,7 +24,6 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTheme(R.style.darkTheme);
     }
 
 
@@ -49,6 +48,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
                 String texte = "Changement de theme";
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
+
 
                 break;
             default:
