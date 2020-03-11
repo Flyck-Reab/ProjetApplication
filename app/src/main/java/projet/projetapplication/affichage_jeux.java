@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.sqliteoperations.myDbAdapter;
 
-class affichageJeux extends AppCompatActivity {
+class affichage_jeux extends AppCompatActivity {
 
     /*
     private myDbAdapter.myDbHelper myhelper;
