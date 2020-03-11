@@ -41,9 +41,9 @@ public class myDbAdapter {
         while (cursor.moveToNext())
         {
             int cid =cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
-            String name =cursor.getString(cursor.getColumnIndex(myDbHelper.NAME));
-            String  password =cursor.getString(cursor.getColumnIndex(myDbHelper.PLATEFORME));
-            buffer.append(cid+ "   " + name + "   " + password +" \n");
+            String jeu =cursor.getString(cursor.getColumnIndex(myDbHelper.NAME));
+            String  plateforme =cursor.getString(cursor.getColumnIndex(myDbHelper.PLATEFORME));
+            buffer.append(cid+ "   " + jeu + "   " + plateforme +" \n");
         }
         return buffer.toString();
     }
