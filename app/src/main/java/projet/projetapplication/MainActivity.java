@@ -2,6 +2,7 @@ package projet.projetapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,9 +23,14 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
+            { setTheme(R.style.AppTheme); }
+        else
+            { setTheme(R.style.darkTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTheme(R.style.darkTheme);
     }
 
 
@@ -45,10 +51,20 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.theme:
+                if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+                else
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    setTheme(R.style.darkTheme);
+                }
                 Toast message;
                 String texte = "Changement de theme";
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
+
 
                 break;
             default:
