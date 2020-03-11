@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Night application theme. -->
+    <style name="darkTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF00FF</item>
+        <item name="colorPrimaryDark">#FF00FF</item>
+        <item name="colorAccent">#FF00FF</item>
+    </style>
+
 </resources>
