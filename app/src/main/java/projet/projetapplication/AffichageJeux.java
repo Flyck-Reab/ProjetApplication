@@ -26,13 +26,8 @@ public class AffichageJeux extends AppCompatActivity {
 
         helper = new myDbAdapter(this);
 
-        Button affichagejeu = (Button)findViewById(R.id.boutonjeu);
-        affichagejeu.setText(helper.getData());
-
-        /*
         TextView affichage = (TextView)findViewById(R.id.name);
         affichage.setText(helper.getData());
-         */
 
         /*
         data.moveToFirst();
