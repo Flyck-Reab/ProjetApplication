@@ -24,9 +24,9 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
-            { setTheme(R.style.AppTheme); }
+            { setTheme(R.style.darkTheme); }
         else
-            { setTheme(R.style.darkTheme);
+            { setTheme(R.style.AppTheme);
         }
 
         super.onCreate(savedInstanceState);
