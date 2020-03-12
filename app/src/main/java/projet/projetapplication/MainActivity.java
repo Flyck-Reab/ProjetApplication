@@ -58,6 +58,9 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
+        Toast message;
+        String texte;
         switch (id) {
             case R.id.theme:
                 if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
@@ -69,8 +72,14 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     setTheme(R.style.darkTheme);
                 }
-                Toast message;
-                String texte = "Changement de theme";
+                texte = "Changement de theme";
+                message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
+                message.show();
+
+
+                break;
+            case R.id.version:
+                texte = "Cette version est la V0";
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
 
