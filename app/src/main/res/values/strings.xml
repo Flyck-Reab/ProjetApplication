@@ -6,4 +6,5 @@
     <string name="Saisie" translatable="false">Saisissez le nom du jeu à ajouter</string>
     <string name="nom_du_jeu" translatable="false">Nom du jeu</string>
     <string name="valider_nom_jeu" translatable="false">Valider</string>
+    <string name="libelle_liste_des_jeux">Game list</string>
 </resources>
