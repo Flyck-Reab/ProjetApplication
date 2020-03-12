@@ -35,9 +35,18 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
 
 
 
-    public void sendMessage(View view)
-    {
-        startActivity(new Intent(MainActivity.this,NouveauJeu.class));
+    public void sendMessage(View view) {
+
+        switch (view.getId()) {
+            case R.id.buttonStart:
+                startActivity(new Intent(MainActivity.this, NouveauJeu.class));
+                break;
+            case R.id.buttonListeJeux:
+                startActivity(new Intent(MainActivity.this, affichage_jeux.class));
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + view);
+        }
     }
 
     @Override
