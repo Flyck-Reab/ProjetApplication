@@ -22,7 +22,7 @@ public class myDbAdapter {
     }
 
     /*insertion d'un nouveau jeu */
-    public long insertData(TextView nomJeu, RadioButton plateforme)
+    public long insertData(String nomJeu, String plateforme)
     {
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -32,6 +32,7 @@ public class myDbAdapter {
         return id;
     }
 
+    //Obtenir tout les enregistrements
     public String getData()
     {
         SQLiteDatabase db = myhelper.getWritableDatabase();
@@ -56,6 +57,12 @@ public class myDbAdapter {
         int count =db.delete(myDbHelper.TABLE_NAME ,myDbHelper.NAME+" = ?",whereArgs);
         return  count;
     }
+
+    public void deleteAll() {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        db.execSQL("drop table MyTable;");
+    }
+
 
     public int updateName(String oldName , String newName)
     {

@@ -41,20 +41,17 @@ public class SelectionPlateforme extends AppCompatActivity {
     public void ajouterJeu(View v) {
         String nom = nomJeu.getText().toString();
         int selectedId=plateFormeGroup.getCheckedRadioButtonId();
-        plateFormeButton=(RadioButton)findViewById(selectedId);
+        plateFormeButton  =(RadioButton)findViewById(selectedId);
 
         if(nom.isEmpty()) {
             Toast.makeText(v.getContext(), "Erreur !", Toast.LENGTH_SHORT).show();
         } else {
-            long id = helper.insertData(nomJeu, plateFormeButton);
-            if(id<=0)
-            {
+            long id = helper.insertData(nom, plateFormeButton.getText().toString());
+            if(id<=0) {
                 Toast.makeText(v.getContext(), "Erreur lors de l'insertion !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
                 plateFormeButton.setText("");
-            } else
-            {
-
+            } else {
                 Toast.makeText(v.getContext(), "Insertion réussie !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
                 plateFormeButton.setText("");
