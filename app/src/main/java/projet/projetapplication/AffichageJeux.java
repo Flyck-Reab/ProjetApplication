@@ -1,12 +1,10 @@
 package projet.projetapplication;
 
-import
-
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity; ...
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AffichageJeux extends AppCompatActivity {
 

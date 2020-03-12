@@ -42,7 +42,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, NouveauJeu.class));
                 break;
             case R.id.buttonListeJeux:
-                startActivity(new Intent(MainActivity.this, affichage_jeux.class));
+                startActivity(new Intent(MainActivity.this, AffichageJeux.class));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view);
