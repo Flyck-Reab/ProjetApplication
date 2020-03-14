@@ -79,10 +79,9 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
 
                 break;
             case R.id.version:
-                texte = "Cette version est la V0";
+                texte = "Cette version est la V1";
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
-
 
                 break;
             default:

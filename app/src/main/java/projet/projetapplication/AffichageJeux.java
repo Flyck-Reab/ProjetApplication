@@ -28,20 +28,6 @@ public class AffichageJeux extends AppCompatActivity {
 
         TextView affichage = (TextView)findViewById(R.id.name);
         affichage.setText(helper.getData());
-
-        /*
-        data.moveToFirst();
-        do {
-            View tableRow = LayoutInflater.from(this).inflate(R.layout.activity_affichage_jeux,null,false);
-            TextView name = (TextView)tableRow.findViewById(R.id.name);
-            TextView title = (TextView)tableRow.findViewById(R.id.title);
-
-            name.setText(data.getString(1));
-            title.setText(data.getString(2));
-            tableLayout.addView(tableRow);
-        } while (data.moveToNext());
-        data.close();
-         */
     }
 
 }
