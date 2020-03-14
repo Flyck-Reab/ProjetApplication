@@ -6,9 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Message;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import projet.projetapplication.R;
 
 
 public class myDbAdapter {
@@ -39,12 +42,13 @@ public class myDbAdapter {
         String[] columns = {myDbHelper.UID,myDbHelper.NAME,myDbHelper.PLATEFORME};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
         StringBuffer buffer= new StringBuffer();
+        int i = 1;
         while (cursor.moveToNext())
         {
-            int cid =cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
             String jeu =cursor.getString(cursor.getColumnIndex(myDbHelper.NAME));
             String  plateforme =cursor.getString(cursor.getColumnIndex(myDbHelper.PLATEFORME));
-            buffer.append(cid+ "   " + jeu + "   " + plateforme +" \n");
+            buffer.append("Jeu n°" + i + " : " + jeu + "   " + plateforme +" \n");
+            i++;
         }
         return buffer.toString();
     }
@@ -58,9 +62,9 @@ public class myDbAdapter {
         return  count;
     }
 
-    public void deleteAll() {
+    public void deleteData() {
         SQLiteDatabase db = myhelper.getWritableDatabase();
-        db.execSQL("drop table MyTable;");
+        db.delete("MyTable",null,null);
     }
 
 

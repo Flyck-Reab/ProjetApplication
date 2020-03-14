@@ -8,6 +8,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -46,7 +47,10 @@ public class SelectionPlateforme extends AppCompatActivity {
         if(nom.isEmpty()) {
             Toast.makeText(v.getContext(), "Erreur !", Toast.LENGTH_SHORT).show();
         } else {
+            // Insertion des données dans la table
             long id = helper.insertData(nom, plateFormeButton.getText().toString());
+
+            //On vérifie si l'insertion s'est déroulé correctement
             if(id<=0) {
                 Toast.makeText(v.getContext(), "Erreur lors de l'insertion !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");

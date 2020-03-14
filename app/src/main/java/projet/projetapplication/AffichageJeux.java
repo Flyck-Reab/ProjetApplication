@@ -1,5 +1,6 @@
 package projet.projetapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +30,13 @@ public class AffichageJeux extends AppCompatActivity {
 
         TextView affichage = (TextView)findViewById(R.id.name);
         affichage.setText(helper.getData());
+    }
+
+    // Effacer les données si l'utilisateur appuie sur le bouton
+    public void effacerDonnees(View v) {
+        helper.deleteData();
+        startActivity(new Intent(AffichageJeux.this, MainActivity.class));
+        Toast.makeText(this.getApplicationContext(), "Données effacées !", Toast.LENGTH_SHORT).show();
     }
 
 }
