@@ -1,5 +1,6 @@
 package projet.projetapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,12 +32,15 @@ public class SelectionPlateforme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_plateforme);
-        nomJeu = (TextView)findViewById(R.id.nomJeu);
-        nomJeu.setText(getIntent().getStringExtra("NomDuJeu"));
         ajouter = (Button)findViewById(R.id.buttonAjout);
         plateFormeGroup = (RadioGroup)findViewById(R.id.PlateFormeGroup);
-
         helper = new myDbAdapter(this);
+    }
+
+    public void saisirJeu(View view)
+    {
+        Intent saisieJeu = new Intent(SelectionPlateforme.this, NouveauJeu.class);
+        startActivityForResult(saisieJeu, 01);
     }
 
     public void ajouterJeu(View v) {
@@ -62,6 +66,17 @@ public class SelectionPlateforme extends AppCompatActivity {
                 Intent k = new Intent(SelectionPlateforme.this, MainActivity.class);
                 startActivity(k);
             }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==01)
+        {
+            nomJeu = (TextView)findViewById(R.id.nomJeu);
+            String nomDuJeu = data.getStringExtra("NomDuJeu");
+            nomJeu.setText(nomDuJeu);
         }
     }
 

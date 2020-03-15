@@ -39,7 +39,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.buttonStart:
-                startActivity(new Intent(MainActivity.this, NouveauJeu.class));
+                startActivity(new Intent(MainActivity.this, SelectionPlateforme.class));
                 break;
             case R.id.buttonListeJeux:
                 startActivity(new Intent(MainActivity.this, AffichageJeux.class));

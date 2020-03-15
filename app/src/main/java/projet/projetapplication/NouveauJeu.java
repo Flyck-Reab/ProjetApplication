@@ -19,10 +19,11 @@ public class NouveauJeu extends AppCompatActivity {
 
     public void sendMessage(View view)
     {
-        Intent selectionPlateforme = new Intent(this, SelectionPlateforme.class);
+        Intent selectionPlateforme = new Intent();
         TextInputEditText textInputNomDuJeu = (TextInputEditText) findViewById(R.id.textInputNomDuJeu);
         String nomDuJeu = textInputNomDuJeu.getText().toString();
         selectionPlateforme.putExtra("NomDuJeu", nomDuJeu);
-        startActivity(selectionPlateforme);
+        setResult(01, selectionPlateforme);
+        finish();
     }
 }
