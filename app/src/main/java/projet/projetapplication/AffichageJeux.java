@@ -24,6 +24,8 @@ public class AffichageJeux extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_affichage_jeux);
+
+
         tableLayout=(TableLayout)findViewById(R.id.tableLayout);
 
         helper = new myDbAdapter(this);
@@ -35,7 +37,8 @@ public class AffichageJeux extends AppCompatActivity {
     // Effacer les données si l'utilisateur appuie sur le bouton
     public void effacerDonnees(View v) {
         helper.deleteData();
-        startActivity(new Intent(AffichageJeux.this, MainActivity.class));
+        recreate();
+        //startActivity(new Intent(AffichageJeux.this, MainActivity.class));
         Toast.makeText(this.getApplicationContext(), "Données effacées !", Toast.LENGTH_SHORT).show();
     }
 
