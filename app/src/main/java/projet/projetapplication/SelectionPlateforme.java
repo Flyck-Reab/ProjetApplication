@@ -32,6 +32,7 @@ public class SelectionPlateforme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_plateforme);
+        nomJeu = (TextView)findViewById(R.id.nomJeu);
         ajouter = (Button)findViewById(R.id.buttonAjout);
         plateFormeGroup = (RadioGroup)findViewById(R.id.PlateFormeGroup);
         helper = new myDbAdapter(this);
@@ -58,13 +59,12 @@ public class SelectionPlateforme extends AppCompatActivity {
             if(id<=0) {
                 Toast.makeText(v.getContext(), "Erreur lors de l'insertion !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
-                plateFormeButton.setText("");
             } else {
                 Toast.makeText(v.getContext(), "Insertion réussie !", Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
-                plateFormeButton.setText("");
-                Intent k = new Intent(SelectionPlateforme.this, MainActivity.class);
-                startActivity(k);
+                finish();
+//                Intent k = new Intent(SelectionPlateforme.this, MainActivity.class);
+//                startActivity(k);
             }
         }
     }
@@ -74,7 +74,6 @@ public class SelectionPlateforme extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==01)
         {
-            nomJeu = (TextView)findViewById(R.id.nomJeu);
             String nomDuJeu = data.getStringExtra("NomDuJeu");
             nomJeu.setText(nomDuJeu);
         }

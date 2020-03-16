@@ -10,55 +10,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="5dp">
 
-            <TableLayout
-                android:id="@+id/tableLayout"
+
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
 
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="center" />
+            </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
 
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.25"
-                        android:gravity="center" />
-                </TableRow>
+                <TextView
+                    android:id="@+id/nameJeu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="start|center_vertical" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <TextView
-                        android:id="@+id/nameJeu"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.25"
-                        android:gravity="left|center_vertical" />
-
-                </TableRow>
-            </TableLayout>
-
-        </LinearLayout>
+            </TableRow>
+        </TableLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/boutonClear"
-        android:text="Effacer les données"
+        android:text="@string/effacer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="effacerDonnees"

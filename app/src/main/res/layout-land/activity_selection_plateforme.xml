@@ -10,7 +10,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Le nom du jeu est :"
+        android:text="@string/le_nom_du_jeu_est"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="Selectionnez une plateforme : "
+        android:text="@string/selectionnez_une_plateforme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +39,7 @@
             android:id="@+id/radioSteam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Steam"
+            android:text="@string/steam"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
             android:id="@+id/radioBlizzard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blizzard"
+            android:text="@string/blizzard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -57,7 +57,7 @@
             android:id="@+id/radioEpic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Epic Games"
+            android:text="@string/epic_games"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="nomdujeu"
+        android:text="@string/nom_du_jeu"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -77,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="ajouterJeu"
-        android:text="Ajouter"
+        android:text="@string/ajouter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:onClick="saisirJeu"
-        android:text="Saisir  un jeu"
+        android:text="@string/saisir_un_jeu"
         app:layout_constraintEnd_toEndOf="@+id/nomJeu"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/nomJeu"

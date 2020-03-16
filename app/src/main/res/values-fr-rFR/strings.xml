@@ -2,7 +2,7 @@
 <resources>
     <string name="ApplicationName">Gestionnaire de jeu</string>
     <string name="Titre" >Bienvenue</string>
-    <string name="descirption">Ce texte decrit l\'utilité de l\'application et la façon de l\'utiliser</string>
-    <string name="Commencer">Commencer</string>
+    <string name="descirption">Cette application est disponible en FR-fr ou en Anglais. Ici il est possible de saisir un jeu à ajouter à une liste, puis d\'acceder à la liste. Ainsi, vous pourrez savoir à tout moment quelles jeux sont en votre possession et sur quelle plateforme.</string>
+    <string name="Commencer">Nouveau jeu</string>
     <string name="libelle_liste_des_jeux">Liste des Jeux</string>
 </resources>

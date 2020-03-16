@@ -20,18 +20,19 @@
             android:id="@+id/radioSteam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Steam"
+            android:text="@string/steam"
             android:src="@drawable/steam_logo_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="113dp" />
+            tools:layout_editor_absoluteY="113dp"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/radioBlizzard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blizzard"
+            android:text="@string/blizzard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -39,7 +40,7 @@
             android:id="@+id/radioEpic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Epic Games"
+            android:text="@string/epic_games"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>
@@ -49,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Le nom du jeu est :"
+        android:text="@string/le_nom_du_jeu_est"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
-        android:text="Selectionnez une plateforme : "
+        android:text="@string/selectionnez_une_plateforme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="nomdujeu"
+        android:text="@string/nomdujeu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -80,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
-        android:text="Ajouter"
+        android:text="@string/ajouter"
         android:onClick="ajouterJeu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +91,7 @@
         android:id="@+id/saisirJeu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saisir  un jeu"
+        android:text="@string/saisir_un_jeu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nomJeu"

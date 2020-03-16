@@ -1,10 +1,19 @@
 <resources>
     <string name="ApplicationName">Game manager</string>
     <string name="Titre">Welcome </string>
-    <string name="descirption">decritption</string>
-    <string name="Commencer">Start</string>
+    <string name="descirption">This application is disponible in FR-fr and partially in English. Here you can add a game to your list and read the list of game</string>
+    <string name="Commencer">New game</string>
     <string name="Saisie" translatable="false">Saisissez le nom du jeu à ajouter</string>
     <string name="nom_du_jeu" translatable="false">Nom du jeu</string>
     <string name="valider_nom_jeu" translatable="false">Valider</string>
     <string name="libelle_liste_des_jeux">Game list</string>
+    <string name="effacer" translatable="false">Effacer les données</string>
+    <string name="steam">Steam</string>
+    <string name="blizzard">Blizzard</string>
+    <string name="epic_games">Epic Games</string>
+    <string name="le_nom_du_jeu_est">Le nom du jeu est :</string>
+    <string name="selectionnez_une_plateforme">Selectionnez une plateforme :</string>
+    <string name="nomdujeu" />
+    <string name="ajouter">Ajouter</string>
+    <string name="saisir_un_jeu">Saisir un jeu</string>
 </resources>
