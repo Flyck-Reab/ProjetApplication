@@ -84,4 +84,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
 
+
+    <Button
+        android:id="@+id/saisirJeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="saisirJeu"
+        android:text="Saisir  un jeu"
+        app:layout_constraintEnd_toEndOf="@+id/nomJeu"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/nomJeu"
+        app:layout_constraintTop_toBottomOf="@+id/nomJeu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
