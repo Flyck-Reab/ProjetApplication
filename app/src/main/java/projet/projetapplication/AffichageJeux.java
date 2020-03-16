@@ -38,7 +38,6 @@ public class AffichageJeux extends AppCompatActivity {
     public void effacerDonnees(View v) {
         helper.deleteData();
         recreate();
-        //startActivity(new Intent(AffichageJeux.this, MainActivity.class));
         Toast.makeText(this.getApplicationContext(), "Données effacées !", Toast.LENGTH_SHORT).show();
     }
 
