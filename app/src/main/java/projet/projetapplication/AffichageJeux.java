@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.example.sqliteoperations.myDbAdapter;
 
@@ -22,6 +23,16 @@ public class AffichageJeux extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //On applique les couleurs tu theme sombre si il est actif
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
+        {
+            setTheme(R.style.darkTheme);
+        }
+        else
+        {
+            setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_affichage_jeux);
 
