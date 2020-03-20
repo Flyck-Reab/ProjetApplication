@@ -29,8 +29,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputNomDuJeu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
             android:hint="@string/nom_du_jeu" />
     </com.google.android.material.textfield.TextInputLayout>
 
