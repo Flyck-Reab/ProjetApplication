@@ -76,18 +76,19 @@ public class SelectionPlateforme extends AppCompatActivity {
         plateFormeButton  =(RadioButton)findViewById(selectedId);
 
         if(nom.isEmpty()) {
-            Toast.makeText(v.getContext(), "Erreur !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), R.string.ToastNomJeuVide, Toast.LENGTH_SHORT).show();
         } else {
             // Insertion des données dans la table
             long id = helper.insertData(nom, plateFormeButton.getText().toString());
 
             //On vérifie si l'insertion s'est déroulé correctement
             if(id<=0) {
-                Toast.makeText(v.getContext(), "Erreur lors de l'insertion !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), R.string.ToastErreurInsertion, Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
             } else {
-                Toast.makeText(v.getContext(), "Insertion réussie !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), R.string.ToastInsertionReussie, Toast.LENGTH_SHORT).show();
                 nomJeu.setText("");
+                startActivity(new Intent(SelectionPlateforme.this, AffichageJeux.class));
                 finish();
 
             }

@@ -18,4 +18,7 @@
     <string name="saisir_un_jeu">Saisir un jeu</string>
     <string name="ToastTheme">Changement de theme</string>
     <string name="ToastVersion">Cette version est la V1</string>
+    <string name="ToastNomJeuVide">Erreur !</string>
+    <string name="ToastErreurInsertion">Erreur lors de l\'insertion !</string>
+    <string name="ToastInsertionReussie">Insertion réussie !</string>
 </resources>
