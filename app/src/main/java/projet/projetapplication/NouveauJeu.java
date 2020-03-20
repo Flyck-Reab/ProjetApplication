@@ -3,6 +3,7 @@ package projet.projetapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,7 +38,7 @@ public class NouveauJeu extends AppCompatActivity {
         TextInputEditText textInputNomDuJeu = (TextInputEditText) findViewById(R.id.textInputNomDuJeu);
         String nomDuJeu = textInputNomDuJeu.getText().toString();
         selectionPlateforme.putExtra("NomDuJeu", nomDuJeu);
-        setResult(01, selectionPlateforme);
+        setResult(Activity.RESULT_OK, selectionPlateforme);
         finish();
     }
 }
