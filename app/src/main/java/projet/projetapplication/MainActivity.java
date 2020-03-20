@@ -85,7 +85,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
                 }
 
                 //Message explicitant que le theme à changé
-                texte = "Changement de theme";
+                texte = getString(R.string.ToastTheme);
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
 
@@ -93,7 +93,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
                 break;
                 //si l'item du menu selectionné est : la demande de version
             case R.id.version:
-                texte = "Cette version est la V1";
+                texte = getString(R.string.ToastVersion);
                 message = Toast.makeText(this.getApplicationContext(),texte, Toast.LENGTH_SHORT);
                 message.show();
 

@@ -16,4 +16,6 @@
     <string name="nomdujeu" />
     <string name="ajouter">Ajouter</string>
     <string name="saisir_un_jeu">Saisir un jeu</string>
+    <string name="ToastTheme">Changement de theme</string>
+    <string name="ToastVersion">Cette version est la V1</string>
 </resources>
