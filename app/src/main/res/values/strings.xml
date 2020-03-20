@@ -1,7 +1,7 @@
 <resources>
     <string name="ApplicationName">Game manager</string>
     <string name="Titre">Welcome </string>
-    <string name="descirption">This application is available in FR-fr and partially in English. Here you can add a game to your list and read the list of game</string>
+    <string name="descirption">This application is available in FR-fr and partially in English. Here you can add a game to your list and read the list of video games</string>
     <string name="Commencer">New game</string>
     <string name="Saisie" translatable="false">Saisissez le nom du jeu à ajouter</string>
     <string name="nom_du_jeu" translatable="false">Nom du jeu</string>
