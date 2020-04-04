@@ -62,8 +62,15 @@ public class SelectionPlateforme extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==01)
         {
-            String nomDuJeu = data.getStringExtra("NomDuJeu");
-            nomJeu.setText(nomDuJeu);
+            try
+            {
+                String nomDuJeu = data.getStringExtra("NomDuJeu");
+                nomJeu.setText(nomDuJeu);
+            }
+            catch (Exception e)
+            {
+                //Empty
+            }
         }
     }
 

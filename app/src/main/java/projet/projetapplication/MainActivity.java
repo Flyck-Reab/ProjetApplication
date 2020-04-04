@@ -63,7 +63,7 @@ public class MainActivity<myDbAdapter> extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         Toast message;
